@@ -1,0 +1,166 @@
+:root {
+    --DataEchoUI-Primary: #1173d5;
+    --DataEchoUI-Primary-background-color: #1173d51f;
+    --DataEchoUI-Danger: #ff4c4c;
+    --DataEchoUI-Danger-background-color: #ff4c4c1f;
+    --DataEchoUI-disabled-color: #b2b2b3;
+}
+.DataEchoUI-button-Primary {
+    background-color: transparent;
+    color: black;
+    padding: 14px 20px;
+    margin: 20px 0;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.DataEchoUI-button-Primary:hover {
+    color: var(--DataEchoUI-Primary);
+    border-color: var(--DataEchoUI-Primary);
+    background-color: var(--DataEchoUI-Primary-background-color);
+}
+.DataEchoUI-button-Danger {
+    background-color: transparent;
+    color: var(--DataEchoUI-Danger);
+    padding: 14px 20px;
+    margin: 20px 0;
+    border: 2px solid var(--DataEchoUI-Danger);
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.DataEchoUI-button-Danger:hover {
+    color: var(--DataEchoUI-Danger);
+    border-color: var(--DataEchoUI-Danger);
+    background-color: var(--DataEchoUI-Danger-background-color);
+}
+.DataEchoUI-disabled {
+    pointer-events: none;
+    background-color: rgba(128, 128, 128, 0.137);
+    opacity: 50%;
+}
+
+.DataEchoUI-input-Primary {
+    padding: 8px 0.1%;
+    width: 100%;
+    border: 2px solid #96c0f9;
+    background-color: transparent; 
+    outline: none;
+    border-radius: 7px;
+    transition: all 0.3s ease; 
+}
+
+.DataEchoUI-input-Primary:focus,
+.DataEchoUI-input-Primary:hover {
+    border-color: var(--DataEchoUI-Primary);
+    background-color: var(--DataEchoUI-Primary-background-color);
+}
+
+.DataEchoUI-navbar {
+    background-color: var(--DataEchoUI-Primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+    top: 0; 
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+
+.DataEchoUI-navbar .logo, .DataEchoUI-navbar .filler {
+    flex: 1;
+    text-align: center;
+    color: white;
+}
+
+.DataEchoUI-navbar .logo {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.DataEchoUI-navbar .nav-links {
+    display: flex;
+    justify-content: center;
+    flex: 3; 
+}
+
+.DataEchoUI-navbar a { 
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.DataEchoUI-navbar a.highlight { 
+    color: var(--DataEchoUI-Primary);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.DataEchoUI-navbar a:hover {
+    border-radius: 25px;
+    background-color: #ffffff21;
+}
+
+.highlight {
+
+    color: var(--DataEchoUI-Primary);
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+.DataEchoUI-navbar a.highlight:hover {
+    border-radius: 25px;
+    background-color: #ffffff;
+}
+
+#nav {
+    width: 200px;
+    background-color: #80808023;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 10;
+    margin-top: 45px
+}
+
+body {
+    margin-left: calc(200px + 30px);
+    padding-top: 50px;
+}
+
+#nav a {
+    display: block;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    position: relative;
+}
+
+.highlight-1 {
+    color: #1370f3 !important;
+    font-weight: bold;
+}
+
+.highlight-1::before {
+    content: "|";
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    margin-left: 5px;
+}
+
+#nav a:hover {
+    background-color: #96bff92c
+}
