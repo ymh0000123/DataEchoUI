@@ -5,6 +5,18 @@
     --DataEchoUI-Danger-background-color: #ff4c4c1f;
     --DataEchoUI-disabled-color: #b2b2b3;
 }
+
+body {
+    margin-right: 20px;
+    margin-left: calc(15% + 40px);
+    padding-top: 50px;
+}
+
+* {
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
 .DataEchoUI-button-Primary {
     background-color: transparent;
     color: black;
@@ -66,7 +78,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7px 0;
+    padding: 0.5% 0;
     top: 0; 
     left: 0;
     right: 0;
@@ -100,7 +112,7 @@
     margin-right: 5px;
 }
 
-.DataEchoUI-navbar a.highlight { 
+.DataEchoUI-navbar a.DataEchoUI-highlight-1 { 
     color: var(--DataEchoUI-Primary);
     padding: 10px 15px;
     text-decoration: none;
@@ -112,55 +124,113 @@
     background-color: #ffffff21;
 }
 
-.highlight {
+.DataEchoUI-highlight-1 {
 
     color: var(--DataEchoUI-Primary);
     background-color: #ffffff;
     border-radius: 25px;
 }
-.DataEchoUI-navbar a.highlight:hover {
+.DataEchoUI-navbar a.DataEchoUI-highlight-1:hover {
     border-radius: 25px;
     background-color: #ffffff;
 }
 
-#nav {
-    width: 200px;
-    background-color: #80808023;
+#DataEchoUI-navbar-left {
+    width: 10%;
+    background-color: rgba(255, 255, 255, 0.753);
     padding: 10px;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     z-index: 10;
-    margin-top: 45px
+    /*margin-top: 55px*/
 }
 
-body {
-    margin-left: calc(200px + 30px);
-    padding-top: 50px;
-}
-
-#nav a {
+#DataEchoUI-navbar-left a {
     display: block;
     color: black;
     padding: 10px;
     text-decoration: none;
     position: relative;
+    animation: slideInFromLeft 0.5s ease forwards;
+    opacity: 0;
+    transform: translateX(-100%);
 }
 
-.highlight-1 {
+.DataEchoUI-highlight-2 {
     color: #1370f3 !important;
     font-weight: bold;
 }
 
-.highlight-1::before {
-    content: "|";
+.DataEchoUI-highlight-2::before {
+    content: "▍";
     position: absolute;
     left: 0;
-    transform: translateX(-100%);
+    transform: translateX(-100%) translateY(-50%);
     margin-left: 5px;
+    animation: DataEchoUI-openFromCenter 0.3s ease forwards;
 }
 
-#nav a:hover {
+
+#DataEchoUI-navbar-left a:hover {
     background-color: #96bff92c
+}
+
+.acrylic-card {
+    background: rgba(255, 255, 255, 0.753);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 50px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 90%;
+}
+
+#DataEchoUI-navbar-left-31 {
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.753);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 10;
+    text-align: center;
+    color: var(--DataEchoUI-Primary);
+    display: flex; /* 启用flex布局 */
+    flex-direction: column; /* 子元素垂直排列 */
+    justify-content: flex-end; /* 子元素靠近容器的底部 */
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+@keyframes DataEchoUI-openFromCenter {
+    from {
+        transform: translateX(-100%) scaleY(0);
+    }
+    to {
+        transform: translateX(-100%) scaleY(1);
+    }
+}
+@keyframes slideInFromLeft {
+    0% {
+    opacity: 0;
+    transform: translateX(-100%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
 }
