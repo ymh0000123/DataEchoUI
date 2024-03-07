@@ -20,7 +20,7 @@ body {
 .DataEchoUI-button-Primary {
     background-color: transparent;
     color: black;
-    padding: 14px 20px;
+    padding: 14px 0px;
     margin: 20px 0;
     border: 2px solid black;
     cursor: pointer;
@@ -98,7 +98,7 @@ body {
     padding-left: 20px;
 }
 
-.DataEchoUI-navbar .nav-links {
+.DataEchoUI-navbar .DataEchoUI-navbar-links {
     display: flex;
     justify-content: center;
     flex: 3; 
@@ -198,19 +198,17 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    z-index: 10;
     text-align: center;
     color: var(--DataEchoUI-Primary);
-    display: flex; /* 启用flex布局 */
-    flex-direction: column; /* 子元素垂直排列 */
-    justify-content: flex-end; /* 子元素靠近容器的底部 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .button-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: 300px;
-    border: 1px solid #ccc;
     padding: 20px;
     box-sizing: border-box;
 }

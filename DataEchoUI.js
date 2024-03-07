@@ -38,15 +38,16 @@ var baseDelay = 0.2;
     });
 });
 
-function adjustMarginTop() {
+function DataEchoUI_ui() {
     var navbarHeight = document.querySelector('.DataEchoUI-navbar').offsetHeight;
     document.querySelector('#DataEchoUI-navbar-left').style.marginTop = navbarHeight + 'px';
-}
-
-function adjustMarginTop2() {
     var navbarHeight2 = document.querySelector('.DataEchoUI-navbar').offsetHeight;
     document.querySelector('#DataEchoUI-navbar-left-31').style.marginTop = navbarHeight2 + 'px';
+    var navbarLeftWidth = document.querySelector('.DataEchoUI-navbar-left').offsetWidth;
+    document.querySelector('body').style.marginLeft = (navbarLeftWidth + 20) + 'px';
+    console.log(navbarLeftWidth);
 }
 
-window.onload = adjustMarginTop,adjustMarginTop2;
-window.onresize = adjustMarginTop,adjustMarginTop2;
+
+window.onload = DataEchoUI_ui;
+window.onresize = DataEchoUI_ui;
