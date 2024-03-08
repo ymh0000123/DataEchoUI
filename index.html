@@ -37,7 +37,41 @@
         <h1 style="height: 55%;">DataEchoUI</h1>
         <a class="DataEchoUI-button-Primary" href="./demo/index.html">查看demo</a>
     </div>
+    <div class="acrylic-card">
+        <h2>欢迎来到DataEchoUI</h2>
+        <div id="ys"><iconify-icon icon="svg-spinners:180-ring-with-bg"></iconify-icon>原神好句API正在加载...</div>
+        <p id="info"></p>
+    </div>
     <script src="./DataEchoUI.js"></script>
+    <script>
+        // 使用JavaScript获取当前网站的域名
+        var domainName = window.location.hostname;
+        var infoElement = document.getElementById("info");
+
+        // 检查域名中的特定字符串来确定访问的是哪个服务
+        if (domainName.includes("ymh0000123.github.io")) {
+            document.getElementById("info").innerHTML = "本站正在使用 <iconify-icon icon='akar-icons:github-fill'></iconify-icon> GitHub Pages 强力驱动。";
+        } else if (domainName.includes("dataechoui.pages.dev")) {
+            document.getElementById("info").innerHTML = "本站正在使用 <iconify-icon icon='logos:cloudflare-icon'></iconify-icon> Cloudflare Pages 强力驱动。";
+        } else {
+            document.getElementById("info").innerHTML = "未知域名" + domainName;
+        }
+    </script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script>
+        //原神好句api by没用的小废鼠
+        fetch('https://unpkg.com/genshin-good-words/Good-words.txt')
+            .then(response => response.text())
+            .then(data => {
+                const lines = data.split('\n');
+                const randomLine = lines[Math.floor(Math.random() * lines.length)];
+                document.getElementById('ys').innerText = randomLine;
+            })
+            .catch(error => {
+                console.error('Error fetching ys:', error);
+            });
+
+    </script>
 </body>
 
 </html>

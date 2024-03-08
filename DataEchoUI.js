@@ -53,7 +53,17 @@ function DataEchoUI_ui() {
     }
     if (document.querySelector('#DataEchoUI-navbar-left')) {
         var navbarLeftWidth = document.querySelector('#DataEchoUI-navbar-left').offsetWidth;
-        document.querySelector('body').style.marginLeft = (navbarLeftWidth + 20) + 'px';
+        if (document.querySelector('body')) {
+            document.querySelector('body').style.marginLeft = (navbarLeftWidth + 20) + 'px';
+        }
+        
+    }
+    if (document.querySelector('#DataEchoUI-navbar-left-31')) {
+        var navbarLeftWidth_31 = document.querySelector('#DataEchoUI-navbar-left-31').offsetWidth;
+        if (document.querySelector('body')) {
+            document.querySelector('body').style.marginLeft = (navbarLeftWidth_31 + 20) + 'px';
+        }
+        
     }
 
     /*var navbarHeight = document.querySelector('.DataEchoUI-navbar').offsetHeight;
