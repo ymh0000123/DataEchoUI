@@ -39,14 +39,31 @@ var baseDelay = 0.2;
 });
 
 function DataEchoUI_ui() {
-    var navbarHeight = document.querySelector('.DataEchoUI-navbar').offsetHeight;
+
+    
+    if (document.querySelector('.DataEchoUI-navbar')) {
+        var navbarHeight = document.querySelector('.DataEchoUI-navbar').offsetHeight;
+        if (document.querySelector('#DataEchoUI-navbar-left')) {
+            document.querySelector('#DataEchoUI-navbar-left').style.marginTop = navbarHeight + 'px';
+        }
+        if (document.querySelector('#DataEchoUI-navbar-left-31')) {
+            document.querySelector('#DataEchoUI-navbar-left-31').style.marginTop = navbarHeight + 'px';
+        }
+        
+    }
+    if (document.querySelector('#DataEchoUI-navbar-left')) {
+        var navbarLeftWidth = document.querySelector('#DataEchoUI-navbar-left').offsetWidth;
+        document.querySelector('body').style.marginLeft = (navbarLeftWidth + 20) + 'px';
+    }
+
+    /*var navbarHeight = document.querySelector('.DataEchoUI-navbar').offsetHeight;
     document.querySelector('#DataEchoUI-navbar-left').style.marginTop = navbarHeight + 'px';
-    var navbarHeight2 = document.querySelector('.DataEchoUI-navbar').offsetHeight;
-    document.querySelector('#DataEchoUI-navbar-left-31').style.marginTop = navbarHeight2 + 'px';
-    var navbarLeftWidth = document.querySelector('.DataEchoUI-navbar-left').offsetWidth;
-    document.querySelector('body').style.marginLeft = (navbarLeftWidth + 20) + 'px';
-    console.log(navbarLeftWidth);
+    document.querySelector('#DataEchoUI-navbar-left-31').style.marginTop = navbarHeight + 'px';
+
+    var navbarLeftWidth = document.querySelector('#DataEchoUI-navbar-left').offsetWidth;
+    document.querySelector('body').style.marginLeft = (navbarLeftWidth + 20) + 'px';*/
 }
+
 
 
 window.onload = DataEchoUI_ui;

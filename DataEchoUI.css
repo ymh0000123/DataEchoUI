@@ -7,8 +7,8 @@
 }
 
 body {
-    margin-right: 20px;
-    margin-left: calc(15% + 40px);
+    /*margin-right: 20px;*/
+    /*margin-left: calc(15% + 40px);*/
     padding-top: 50px;
 }
 
@@ -20,12 +20,11 @@ body {
 .DataEchoUI-button-Primary {
     background-color: transparent;
     color: black;
-    padding: 14px 0px;
-    margin: 20px 0;
+    padding: 14px 4px;
+    margin: 10px 0;
     border: 2px solid black;
     cursor: pointer;
     border-radius: 4px;
-    font-size: 16px;
     transition: color 0.3s, border-color 0.3s;
 }
 
@@ -37,12 +36,11 @@ body {
 .DataEchoUI-button-Danger {
     background-color: transparent;
     color: var(--DataEchoUI-Danger);
-    padding: 14px 20px;
-    margin: 20px 0;
+    padding: 14px 4px;
+    margin: 10px 0;
     border: 2px solid var(--DataEchoUI-Danger);
     cursor: pointer;
     border-radius: 4px;
-    font-size: 16px;
     transition: color 0.3s, border-color 0.3s;
 }
 
@@ -58,7 +56,7 @@ body {
 }
 
 .DataEchoUI-input-Primary {
-    padding: 8px 0.1%;
+    padding: 8px 0px;
     width: 100%;
     border: 2px solid #96c0f9;
     background-color: transparent; 
@@ -144,6 +142,7 @@ body {
     left: 0;
     height: 100%;
     z-index: 10;
+    animation: DataEchoUI-slideInFromLeft 0.2s ease forwards;
     /*margin-top: 55px*/
 }
 
@@ -153,7 +152,7 @@ body {
     padding: 10px;
     text-decoration: none;
     position: relative;
-    animation: slideInFromLeft 0.5s ease forwards;
+    animation: DataEchoUI-slideInFromLeft 0.5s ease forwards;
     opacity: 0;
     transform: translateX(-100%);
 }
@@ -187,7 +186,7 @@ body {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
-    width: 90%;
+    width: calc(100% - 50px);
 }
 
 #DataEchoUI-navbar-left-31 {
@@ -203,6 +202,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    animation: DataEchoUI-slideInFromLeft 0.2s ease forwards;
 }
 .button-container {
     display: flex;
@@ -222,7 +222,7 @@ body {
         transform: translateX(-100%) scaleY(1);
     }
 }
-@keyframes slideInFromLeft {
+@keyframes DataEchoUI-slideInFromLeft {
     0% {
     opacity: 0;
     transform: translateX(-100%);

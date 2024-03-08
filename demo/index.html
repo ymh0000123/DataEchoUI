@@ -16,9 +16,11 @@
   </style>-->
   <style>
     body {
-  background-color: #c6d5ec;
-}
+      background-color: #c6d5ec;
+    }
   </style>
+  <link rel="stylesheet" href="https://npm.elemecdn.com/prism-themes/themes/prism-coldark-cold.css">
+  <script src="https://npm.elemecdn.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </head>
 
 <body>
@@ -43,14 +45,14 @@
     <h3>正常</h3>
     <button class="DataEchoUI-button-Primary">这是按钮 DataEchoUI-button-Primary</button>
     <button class="DataEchoUI-button-Danger">这是按钮 DataEchoUI-button-Danger</button>
-    <pre><code>
-&lt;button class=&quot;DataEchoUI-button-Primary&quot;&gt;这是按钮 DataEchoUI-button-Primary&lt;/button>
+    <pre><code class="language-javascript">
+&lt;button class=&quot;DataEchoUI-button-Primary&quot;&gt;这是按钮 DataEchoUI-button-Primary&lt;/button&gt;
 &lt;button class=&quot;DataEchoUI-button-Danger&quot;&gt;这是按钮 DataEchoUI-button-Danger&lt;/button&gt;
   </code></pre>
     <h3>禁用</h3>
     <button class="DataEchoUI-button-Primary DataEchoUI-disabled">这是按钮 DataEchoUI-button-Primary</button>
     <button class="DataEchoUI-button-Danger DataEchoUI-disabled">这是按钮 DataEchoUI-button-Danger</button>
-    <pre><code>
+    <pre><code class="language-javascript">
 &lt;button class=&quot;DataEchoUI-button-Primary DataEchoUI-disabled&quot;&gt;这是按钮 DataEchoUI-button-Primary&lt;/button>
 &lt;button class=&quot;DataEchoUI-button-Danger DataEchoUI-disabled&quot;&gt;这是按钮 DataEchoUI-button-Danger&lt;/button&gt;
   </code></pre>
@@ -58,15 +60,24 @@
   <div class="acrylic-card">
     <h2 id="input">输入框</h2>
     <input class="DataEchoUI-input-Primary" type="text" placeholder="这是 DataEchoUI-input-Primary">
-    <pre><code>
+    <pre><code class="language-javascript">
 &lt;input class=&quot;DataEchoUI-input-Primary&quot; type=&quot;text&quot; placeholder="这是 DataEchoUI-input-Primary"&gt;
   </code></pre>
   </div>
   <div class="acrylic-card">
     <h2>卡片</h2>
-    <p>这个卡片</p>
+    <p>这是个卡片</p>
+    <pre><code class="language-javascript">
+&lt;div class=&quot;acrylic-card&quot;&gt;这是个卡片&lt;/div&gt;
+    </code></pre>
   </div>
   <script src="../DataEchoUI.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      Prism.highlightAll();
+    });
+    </script>
+    
 </body>
 
 </html>
