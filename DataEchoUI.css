@@ -6,11 +6,6 @@
     --DataEchoUI-disabled-color: #b2b2b3;
 }
 
-body {
-    /*margin-right: 20px;*/
-    /*margin-left: calc(15% + 40px);*/
-    padding-top: 50px;
-}
 
 * {
     white-space: normal;
@@ -142,7 +137,7 @@ body {
     left: 0;
     height: 100%;
     z-index: 10;
-    animation: DataEchoUI-slideInFromLeft 0.2s ease forwards;
+    animation: DataEchoUI-slideInFromLeft 0.5s ease forwards;
     /*margin-top: 55px*/
 }
 
@@ -176,7 +171,7 @@ body {
     background-color: #96bff92c
 }
 
-.acrylic-card {
+.DataEchoUI-card {
     background: rgba(255, 255, 255, 0.753);
     backdrop-filter: blur(10px);
     border-radius: 10px;
@@ -202,7 +197,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    animation: DataEchoUI-slideInFromLeft 0.2s ease forwards;
+    z-index: 1;
+    animation: DataEchoUI-slideInFromLeft 0.6s ease forwards;
 }
 .button-container {
     display: flex;
@@ -212,7 +208,20 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
+.DataEchoUI-select {
+    padding: 8px 0px;
+    width: 100%;
+    border: 2px solid #96c0f9;
+    background-color: transparent; 
+    outline: none;
+    border-radius: 7px;
+}
 
+.DataEchoUI-select:focus,
+.DataEchoUI-select:hover {
+    border-color: var(--DataEchoUI-Primary);
+    background-color: var(--DataEchoUI-Primary-background-color);
+}
 
 @keyframes DataEchoUI-openFromCenter {
     from {

@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>DataEchoUI</title>
   <link rel="stylesheet" href="../DataEchoUI.css">
+  <script src="../DataEchoUI.js"></script>
   <link rel="shortcut icon" type="image/ico" href="https://xiaofeishu-picture.pages.dev/picture/5.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--<style>
@@ -39,8 +40,10 @@
   <div id="DataEchoUI-navbar-left">
     <a href="#button">按钮</a>
     <a href="#input">输入框</a>
+    <a href="#card">卡片</a>
+    <a href="#select">select</a>
   </div>
-  <div class="acrylic-card">
+  <div class="DataEchoUI-card">
     <h2 id="button">按钮</h2>
     <h3>正常</h3>
     <button class="DataEchoUI-button-Primary">这是按钮 DataEchoUI-button-Primary</button>
@@ -57,21 +60,32 @@
 &lt;button class=&quot;DataEchoUI-button-Danger DataEchoUI-disabled&quot;&gt;这是按钮 DataEchoUI-button-Danger&lt;/button&gt;
   </code></pre>
   </div>
-  <div class="acrylic-card">
+  <div class="DataEchoUI-card">
     <h2 id="input">输入框</h2>
     <input class="DataEchoUI-input-Primary" type="text" placeholder="这是 DataEchoUI-input-Primary">
     <pre><code class="language-javascript">
 &lt;input class=&quot;DataEchoUI-input-Primary&quot; type=&quot;text&quot; placeholder="这是 DataEchoUI-input-Primary"&gt;
   </code></pre>
   </div>
-  <div class="acrylic-card">
-    <h2>卡片</h2>
+  <div class="DataEchoUI-card">
+    <h2 id="card">卡片</h2>
     <p>这是个卡片</p>
     <pre><code class="language-javascript">
-&lt;div class=&quot;acrylic-card&quot;&gt;这是个卡片&lt;/div&gt;
+&lt;div class=&quot;DataEchoUI-card&quot;&gt;这是个卡片&lt;/div&gt;
     </code></pre>
   </div>
-  <script src="../DataEchoUI.js"></script>
+  <div class="DataEchoUI-card">
+    <h2 id="select">select</h2>
+    <select name="awa" class="DataEchoUI-select">
+      <option value="">--awa--</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+  </div>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       Prism.highlightAll();

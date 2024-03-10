@@ -19,6 +19,7 @@
             background-color: #c6d5ec;
         }
     </style>
+    <script src="./DataEchoUI.js"></script>
 </head>
 
 <body>
@@ -37,12 +38,12 @@
         <h1 style="height: 55%;">DataEchoUI</h1>
         <a class="DataEchoUI-button-Primary" href="./demo/index.html">查看demo</a>
     </div>
-    <div class="acrylic-card">
+    <div class="DataEchoUI-card">
         <h2>欢迎来到DataEchoUI</h2>
         <div id="ys"><iconify-icon icon="svg-spinners:180-ring-with-bg"></iconify-icon>原神好句API正在加载...</div>
         <p id="info"></p>
     </div>
-    <script src="./DataEchoUI.js"></script>
+
     <script>
         // 使用JavaScript获取当前网站的域名
         var domainName = window.location.hostname;
@@ -53,7 +54,13 @@
             document.getElementById("info").innerHTML = "本站正在使用 <iconify-icon icon='akar-icons:github-fill'></iconify-icon> GitHub Pages 强力驱动。";
         } else if (domainName.includes("dataechoui.pages.dev")) {
             document.getElementById("info").innerHTML = "本站正在使用 <iconify-icon icon='logos:cloudflare-icon'></iconify-icon> Cloudflare Pages 强力驱动。";
-        } else {
+        } else if (domainName.includes("127.0.0.1")) {
+            document.getElementById("info").innerHTML = "本站正在 <iconify-icon icon='material-symbols:web'></iconify-icon> 本地运行。";
+        } else if (domainName.includes("localhost")) {
+            document.getElementById("info").innerHTML = "本站正在 <iconify-icon icon='material-symbols:web'></iconify-icon> 本地运行。";
+        } else if (domainName.includes("")) {
+            document.getElementById("info").innerHTML = "本站正在 <iconify-icon icon='material-symbols:web'></iconify-icon> 本地文件运行。";
+        }else {
             document.getElementById("info").innerHTML = "未知域名" + domainName;
         }
     </script>

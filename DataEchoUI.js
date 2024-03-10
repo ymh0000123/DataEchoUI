@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-var links = document.querySelectorAll('#DataEchoUI-navbar-left a');
-var baseDelay = 0.2;
+var DataEchoUI_links = document.querySelectorAll('#DataEchoUI-navbar-left a');
+var DataEchoUI_baseDelay = 0.1;
 
-    links.forEach(function(link, index) {
-    var delay = baseDelay * index + 's';
+    DataEchoUI_links.forEach(function(link, index) {
+    var delay = DataEchoUI_baseDelay * index + 's';
     link.style.animationDelay = delay;
     });
 });
@@ -45,9 +45,11 @@ function DataEchoUI_ui() {
         var navbarHeight = document.querySelector('.DataEchoUI-navbar').offsetHeight;
         if (document.querySelector('#DataEchoUI-navbar-left')) {
             document.querySelector('#DataEchoUI-navbar-left').style.marginTop = navbarHeight + 'px';
+            document.querySelector('body').style.marginTop = (navbarHeight + 20)+ 'px';
         }
         if (document.querySelector('#DataEchoUI-navbar-left-31')) {
             document.querySelector('#DataEchoUI-navbar-left-31').style.marginTop = navbarHeight + 'px';
+            document.querySelector('body').style.marginTop = (navbarHeight + 20)+ 'px';
         }
         
     }
