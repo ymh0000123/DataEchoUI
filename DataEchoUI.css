@@ -200,14 +200,6 @@
     z-index: 1;
     animation: DataEchoUI-slideInFromLeft 0.6s ease forwards;
 }
-.button-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 300px;
-    padding: 20px;
-    box-sizing: border-box;
-}
 .DataEchoUI-select {
     padding: 8px 0px;
     width: 100%;
