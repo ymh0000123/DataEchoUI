@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     var links = document.querySelectorAll('#DataEchoUI-navbar-left a');
-    // 自动收集所有的哈希值
-    var hashes = Array.from(links).map(link => link.getAttribute('href')).filter(href => href.startsWith('#'));
-    var currentIndex = 0; // 当前哈希值的索引
 
     function removeHighlight() {
         links.forEach(link => link.classList.remove('DataEchoUI-highlight-2'));
@@ -29,17 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     window.addEventListener('hashchange', highlightLinkByHash);
-
-    // 定义一个函数用于自动切换哈希
-    function autoChangeHash() {
-        if (hashes.length > 0) {
-            currentIndex = (currentIndex + 1) % hashes.length; // 更新索引值，循环哈希列表
-            window.location.hash = hashes[currentIndex]; // 更改哈希值
-        }
-    }
-
-    // 每5秒自动切换一次哈希
-    setInterval(autoChangeHash, 5000);
 });
 
 
