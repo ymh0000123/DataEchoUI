@@ -40,11 +40,11 @@
     </div>
     <div class="DataEchoUI-card">
         <h2>欢迎来到DataEchoUI</h2>
-        <div id="ys"><iconify-icon icon="svg-spinners:180-ring-with-bg"></iconify-icon>原神好句API正在加载...</div>
+        <p id="ys"><iconify-icon icon="svg-spinners:180-ring-with-bg"></iconify-icon>原神好句API正在加载...</p>
         <p id="info"></p>
-        <a class="DataEchoUI-button-Primary">Cloudflare Pages</a>
-        <a class="DataEchoUI-button-Primary">GitHub Pages</a>
-        <p>镜像站
+        <p>
+            <a class="DataEchoUI-button-Primary" href="https://dataechoui.pages.dev/">Cloudflare Pages</a>
+            <a class="DataEchoUI-button-Primary" href="https://ymh0000123.github.io/DataEchoUI/">GitHub Pages</a>
         </p>
     </div>
 
@@ -64,7 +64,7 @@
             document.getElementById("info").innerHTML = "本站正在 <iconify-icon icon='material-symbols:web'></iconify-icon> 本地运行。";
         } else if (domainName.includes("")) {
             document.getElementById("info").innerHTML = "本站正在 <iconify-icon icon='material-symbols:web'></iconify-icon> 本地文件运行。";
-        }else {
+        } else {
             document.getElementById("info").innerHTML = "未知域名" + domainName;
         }
     </script>

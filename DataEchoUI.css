@@ -15,11 +15,12 @@
 .DataEchoUI-button-Primary {
     background-color: transparent;
     color: black;
-    padding: 14px 4px;
-    margin: 10px 0;
+    padding: 10px 4px;
+    margin: 10px 5px;
     border: 2px solid black;
     cursor: pointer;
     border-radius: 4px;
+    text-decoration: none;
     transition: color 0.3s, border-color 0.3s;
 }
 
@@ -31,12 +32,14 @@
 .DataEchoUI-button-Danger {
     background-color: transparent;
     color: var(--DataEchoUI-Danger);
-    padding: 14px 4px;
+    padding: 10px 4px;
     margin: 10px 0;
     border: 2px solid var(--DataEchoUI-Danger);
     cursor: pointer;
     border-radius: 4px;
+    text-decoration: none;
     transition: color 0.3s, border-color 0.3s;
+    margin-bottom: 10px;
 }
 
 .DataEchoUI-button-Danger:hover {
@@ -178,10 +181,10 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: 50px;
-    width: 100%;
     padding-left: 20px;
     padding-right: 20px;
     width: calc(100% - 50px);
+    height: calc(100% + 50px);
 }
 
 #DataEchoUI-navbar-left-31 {
