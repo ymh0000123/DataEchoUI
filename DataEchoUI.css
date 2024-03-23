@@ -218,6 +218,29 @@
     background-color: var(--DataEchoUI-Primary-background-color);
 }
 
+
+.DataEchoUI-progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px;
+  }
+  .DataEchoUI-progress-bar::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #3498db;
+    animation: DataEchoUI-progress-animation 2s linear infinite;
+  }
+  @keyframes DataEchoUI-progress-animation {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+
 @keyframes DataEchoUI-openFromCenter {
     from {
         transform: translateX(-100%) scaleY(0);
